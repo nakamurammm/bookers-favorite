@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :books
   has_many :book_comments
+  has_many :favorites
   attachment :profile_image, destroy: false
 
   validates :name, uniqueness: true, length: {maximum: 20, minimum: 2}
